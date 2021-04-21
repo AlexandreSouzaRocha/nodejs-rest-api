@@ -1,0 +1,55 @@
+{
+  "name": "nodejs-rest-api",
+  "version": "1.0.0",
+  "description": "NodeJs Rest API",
+  "main": "server.js",
+  "scripts": {
+    "test": "npx mocha --parallel ./tests/",
+    "test:dev": "npx mocha -w --exit ./tests/",
+    "test:cov": "npx nyc --check-covarage --instrument --reporter=html --reporter=text npm test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandreSouzaRocha/nodejs-rest-api.git"
+  },
+  "keywords": [
+    "Node",
+    "Rest",
+    "Fluent",
+    "Interface",
+    "Builder"
+  ],
+  "author": "Alexandre Rocha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexandreSouzaRocha/nodejs-rest-api/issues"
+  },
+  "homepage": "https://github.com/AlexandreSouzaRocha/nodejs-rest-api#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "mocha": "^8.3.2",
+    "nyc": "^15.1.0",
+    "prettier": "^2.2.1",
+    "serverless": "^2.37.1",
+    "serverless-offline": "^6.9.0",
+    "sinon": "^10.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "luxon": "^1.26.0",
+    "pg": "^8.6.0",
+    "uuid": "^3.4.0",
+    "winston": "^3.3.3",
+    "yup": "^0.32.9"
+  }
+}
