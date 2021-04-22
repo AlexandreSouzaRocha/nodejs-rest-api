@@ -2,12 +2,12 @@
   "name": "nodejs-rest-api",
   "version": "1.0.0",
   "description": "NodeJs Rest API",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "npx mocha --parallel ./tests/",
     "test:dev": "npx mocha -w --exit ./tests/",
     "test:cov": "npx nyc --check-covarage --instrument --reporter=html --reporter=text npm test",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

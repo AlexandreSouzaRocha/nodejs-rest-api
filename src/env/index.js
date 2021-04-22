@@ -1,6 +1,6 @@
 const { config } = require('dotenv');
 
-const parsedEnv = config().parsed();
+const parsedEnv = config().parsed;
 
 module.exports.env = {
 	DB_USER: parsedEnv.DB_USER || 'developer_user',
@@ -13,4 +13,5 @@ module.exports.env = {
 	DB_CONNECTION_TIMEOUT_MILLIS: parsedEnv.DB_CONNECTION_TIMEOUT_MILLIS || '3000',
 	DB_IDLE_TIMEOUT_MILLIS: parsedEnv.DB_IDLE_TIMEOUT_MILLIS || '3000',
 	ENV: parsedEnv.ENV || 'dev',
+	APP_PORT: parsedEnv.APP_PORT || '3000',
 };
