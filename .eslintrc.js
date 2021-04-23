@@ -19,5 +19,7 @@ module.exports = {
 		ignorePackages: true,
 	},
 	plugins: ['prettier'],
-	rules: {},
+	rules: {
+		'no-restricted-syntax': 'off',
+	},
 };
