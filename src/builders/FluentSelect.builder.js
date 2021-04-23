@@ -46,10 +46,9 @@ class FluentSelectBuilder {
 	}
 
 	build() {
-		// TODO: FACADE implementado. Implementar métodos para construir query. [select, where, join etc..]
 		const select = 'SELECT ';
 		const join = 'JOIN ';
-		const from = `${this.#options.schema}.${this.#options.table} `;
+		const from = `FROM ${this.#options.schema}.${this.#options.table} `;
 		const where = 'WHERE ';
 		const params = [];
 
@@ -78,6 +77,12 @@ class FluentSelectBuilder {
 			where.concat(this.#where.map(({ field }, idx) => `${field} = $${idx + 1}`).join(','));
 			this.#where.forEach(({ value }) => params.push(`${value}`));
 		}
+
+		this.#query.concat('RETURNING *');
+
+		const { rows } = this.#connection.query(this.#query, params);
+
+		return rows;
 	}
 }
 

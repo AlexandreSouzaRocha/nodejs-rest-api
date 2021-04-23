@@ -4,8 +4,8 @@
   "description": "NodeJs Rest API",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha --parallel ./tests/",
-    "test:dev": "npx mocha -w --exit ./tests/",
+    "test": "npx mocha --parallel ./tests/**",
+    "test:dev": "npx mocha -w --exit ./tests/**",
     "test:cov": "npx nyc --check-covarage --instrument --reporter=html --reporter=text npm test",
     "start": "node index.js"
   },

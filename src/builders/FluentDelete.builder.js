@@ -1,19 +1,42 @@
+const { constants } = require('../utils/constants');
+
+const { SQL_BUILDER } = constants;
+
 class FluentDeleteBuilder {
 	#connection;
 
 	#options;
 
-	#delete;
+	#query;
 
-	where;
+	#delete = [];
+
+	#where = [];
 
 	constructor({ connection, options }) {
 		this.#options = options;
 		this.#connection = connection;
+		this.#query = SQL_BUILDER.BLANK_QUERY;
 	}
 
 	static withConnection({ connection, options }) {
 		return new FluentDeleteBuilder({ connection, options });
+	}
+
+	delete(fields) {
+		this.#delete = fields;
+
+		return this;
+	}
+
+	where(query) {
+		this.#where = query;
+
+		return this;
+	}
+
+	build() {
+		return this.#connection;
 	}
 }
 
