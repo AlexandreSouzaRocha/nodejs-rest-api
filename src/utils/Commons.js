@@ -7,7 +7,7 @@ const { DATE } = constants;
 class Commons {
 	static getLocaleDate() {
 		const parsedDate = parseISO(new Date().toISOString());
-		return utcToZonedTime(parsedDate, 'America/Sao_Paulo');
+		return utcToZonedTime(parsedDate, 'America/Sao_Paulo').toISOString();
 	}
 
 	static formatDate(date, format = DATE.ISO8601) {
