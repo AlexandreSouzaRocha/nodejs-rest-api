@@ -1,12 +1,12 @@
 module.exports = {
 	singleQuote: true,
 	trailingComma: 'all',
-	useTabs: true,
-	tabWidth: 4,
-	printWidth: 100,
+	useTabs: false,
+	tabWidth: 2,
+	printWidth: 120,
 	overrides: [
 		{
-			files: '*.js',
+			files: '*.mjs',
 		},
 	],
 };

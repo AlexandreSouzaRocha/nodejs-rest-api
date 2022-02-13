@@ -1,0 +1,36 @@
+{
+  "root": true,
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 13,
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "parser": "@babel/eslint-parser",
+  "settings": {
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        "js": "never",
+        "jsx": "never",
+        "mjs": "never"
+      }
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".mjs"]
+      }
+    },
+    "ignorePackages": true
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "no-restricted-syntax": "off",
+    "import/extensions": "off"
+  }
+}
