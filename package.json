@@ -42,7 +42,7 @@
     "sinon": "^10.0.0"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "body-parser": "^1.19.0",
     "cls-hooked": "^4.2.2",
     "cors": "^2.8.5",
